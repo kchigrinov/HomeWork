@@ -3,12 +3,8 @@ if (isset($_POST['first'])){
 	$a = $_POST['first'];
 	function getReverseWords($a){
 		$words = explode('. ', $a);
-		$reverseSentences = [];
-		foreach ($words as $word) {
-			$reverseSentences[] =  $word;
-		}
-		$return = array_reverse($reverseSentences);
-		return implode(' ', $return);
+		$return = array_reverse($words);
+		return implode('. ', $return);
 	}
  	$result = getReverseWords($a);	
 }
